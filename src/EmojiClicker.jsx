@@ -26,7 +26,6 @@ export default function EmojiClicker() {
                 emoji: "❤️"  // Set emoji to heart
             };
         }));
-    };
     
     return (
         <div>
