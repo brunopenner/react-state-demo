@@ -16,14 +16,25 @@ export default function EmojiClicker() {
         setEmojis(prevEmojis => {
             return prevEmojis.filter(e => e.id !== id)
         })
-        
     }
+
+    //update all elements and make them all into hearts
+    const turnIntoHearts = () => {
+        setEmojis(emojis.map(item => {
+            return {
+                ...item,
+                emoji: "❤️"  // Set emoji to heart
+            };
+        }));
+    };
+    
     return (
         <div>
             {emojis.map((e) => (
                 <span onClick={() => deleteEmoji(e.id)} key={e.id} style={{fontSize: "4rem"}}>{e.emoji}</span>
             ))}
-            <button onClick={addEmoji}>Add Emoji</button>
+            <button style={{display: "block", textAlign: "center", margin: "20px auto"}} onClick={addEmoji}>Add Emoji</button>
+            <button style={{display: "block", textAlign: "center", margin: "20px auto"}} onClick={turnIntoHearts}>Make them all hearts</button>
         </div>
     )
 }
