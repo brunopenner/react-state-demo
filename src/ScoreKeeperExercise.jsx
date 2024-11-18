@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ScoreKeeperExercise({ numPlayers = 2, target = 10 }) {
+export default function ScoreKeeperExercise({ numPlayers = 3, target = 5 }) {
     // Initialize scores for each player
     const [scores, setScores] = useState(Array(numPlayers).fill(0));
     const [gameOver, setGameOver] = useState(false);

@@ -18,7 +18,7 @@ function App() {
         <Dumbo /> */}
         {/* <ScoreKeeper /> */}
         {/* <EmojiClicker /> */}
-        <ScoreKepperExercise numPlayers={10} />
+        <ScoreKepperExercise numPlayers={10} target={3} />
     </>
   )
 }
